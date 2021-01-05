@@ -1,0 +1,234 @@
+%---------------------------------------------------------------------------------------
+%
+%	Template: Articles
+% 	Lukas Freund
+%	Last updated: June 2019
+%
+%----------------------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------------------
+% Main parameters
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+%----------------------------------------------------------------------------------------
+% Settings
+%----------------------------------------------------------------------------------------
+\usepackage[authoryear, round, longnamesfirst]{natbib}
+\def\citeapos#1{\citeauthor{#1}'s (\citeyear{#1})}
+\def\citeapost#1{\citeauthor{#1}'s}%
+
+%----------------------------------------------------------------------------------------
+% Packages
+%----------------------------------------------------------------------------------------
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsthm} 
+\usepackage{amssymb}
+\usepackage{mathptmx}
+\usepackage{parskip}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{graphicx} 
+\usepackage{booktabs} 
+\usepackage{amssymb}
+\usepackage{longtable,booktabs} 
+\usepackage{marvosym}
+\usepackage{csquotes}
+\usepackage{pgfplots}
+\usepackage{enumitem}
+\usepackage{psfrag}
+\usepackage{epstopdf}
+\usepackage{subcaption}
+\usepackage{ctable}
+\usepackage[flushleft]{threeparttable}
+\usepackage{microtype}
+\usepackage{wrapfig}
+\usepackage[toc,page]{appendix}
+
+%----------------------------------------------------------------------------------------
+% Extra commands
+%----------------------------------------------------------------------------------------
+
+\newcommand\highlight[1]{\textcolor{LFBlue}{\textbf{#1}}}
+\newcommand\mathhighlight[1]{\textcolor{LFBlue}{\boldsymbol{#1}}}
+\newcommand\draftnote[1]{\textcolor{LightGrey}{\textnormal{#1}}}
+\newcommand\cites[1]{\citeauthor{#1}'s\ (\citeyear{#1})}
+
+\DeclareMathOperator*{\maxi}{max}
+\DeclareMathOperator*{\mini}{min}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\distributed}{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily iid}}}{\thicksim}}}
+
+\theoremstyle{plain}
+\newtheorem{remark}{Remark}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{assumption}{Assumption}
+
+%----------------------------------------------------------------------------------------
+% Design
+%----------------------------------------------------------------------------------------
+	
+% General specs
+\usepackage[margin=1in]{geometry}
+\onehalfspacing
+\usepackage{url}
+\setcounter{secnumdepth}{5}
+\usepackage{color}   %May be necessary if you want to color links
+\usepackage[bottom]{footmisc}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true, % set true if you want colored links
+	linktoc=all,     % set to all if you want both sections and subsections linked
+	linkcolor=OxfordBlue2,  %choose some color if you want links to stand out
+	citecolor = OxfordBlue2,
+	urlcolor  = OxfordBlue2,
+}
+	
+% Define some colors
+	\definecolor{LFBlue}{RGB}{4,30,150} 
+	\definecolor{OxfordBlue2}{RGB}{4,30,100} 
+	\definecolor{LightGrey}{rgb}{0.3686, 0.5255, 0.6235} % (secondary)
+	
+% Plots
+\pgfplotsset{yticklabel style={text width=3em,align=right}}
+
+\newcommand\blfootnotea[1]{%
+	\begingroup
+	\renewcommand\thefootnote{$*$}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+\newcommand\blfootnoteb[1]{%
+	\begingroup
+	\renewcommand\thefootnote{$\dag$}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+\newcommand\blfootnotec[1]{%
+	\begingroup
+	\renewcommand\thefootnote{$\ddagger$}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+%----------------------------------------------------------------------------------------
+%	MAIN DOC
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\doublespacing
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\thispagestyle{empty}
+\vspace*{-1cm}
+\begin{center}
+	{\Large Replication files for:\\ ``Workers, Capitalists, and the Government: \\Fiscal Policy and Income (Re)Distribution''}
+	 \\
+%	\vspace*{2cm}
+	\hspace*{-10cm}
+
+		\centering{
+		{\large Cristiano Cantore}\blfootnoteb{Bank of England, CfM \& University of Surrey. Email: \href{mailto:cristiano.cantore@gmail.com}{cristiano.cantore@gmail.com}. Web: \href{https://www.cristianocantore.com/}{cristianocantore.com}.}
+	}
+	%	\end{minipage}% This must go next to `\end{minipage}`
+	\hspace*{1cm}
+	%	\begin{minipage}{.5\textwidth}
+	\centering{
+		{\large Lukas B. Freund}\blfootnotec{University of Cambridge. Email: \href{mailto:lukas.beat.freund@gmail.com}{lukas.beat.freund@gmail.com}. Web: \href{https://www.lukasfreund.com/}{lukasfreund.com}.}
+		
+	}
+
+\hspace*{-10cm}
+			\vspace*{-0.5cm}
+
+ October 2020
+			\vspace*{1cm}
+
+\end{center}
+
+
+%----------------------------------------------------------------------------------
+%	MAIN CONTENT
+%----------------------------------------------------------------------------------
+This document describes how to use the replication codes accompanying the article ``Workers, Capitalists, and the Government: Fiscal Policy and Income (Re)Distribution.'' Corresponding to sections 2 and 3 of the paper, there are two main folders that respectively consider the partial equilibrium consumption-savings problem and the proposed, new two-agent New Keynesian (TANK) model with capitalists and workers.
+
+Should you have any questions or comments, please feel free to contact us under the indicated email addresses.
+
+\section{Partial equilibrium iMPCs}
+\subsection{Description of main files}
+The files contained in this folder are as follows.
+
+\path{main_PE_MPCs_Analytical_Plotting.m} \\
+This file computes and plots iMPCs for a one-off income shock in a partial equilibrium consumption-savings model with portfolio adjustment costs, using the analytical solution (accurate to first-order) provided in the main text. The user can choose the anticipation horizon $s$. The structural parameters are calibrated to match the empirical evidence, as described in the main text.
+
+\path{main_PE_MPCs_Analytical_Matching.m}\\
+This file implements computes the values of population share $\lambda$ and portfolio adjustment cost parameter $\psi$ to match targets from micro consumption data.
+
+\path{main_PE_MPCs_LTI.m}\\
+Complementing the analytical solution, this file solves the partial equilibrium model numerically. We use the linear time iteration approach of \citet{rendahlLinearTimeIteration2017a}. We also used this approach to compute the iMPCs in the model with habits (see parameter `sPar.hab').
+
+\path{main_PE_Rates_Analytical_Plotting.m}\\
+This file is similar to \path{main_PE_MPCs_Analytical_Plotting.m}, the only difference being that it looks at interest rate shocks.
+
+\path{main_PE_Rates_Analytical_Extra.m}\\
+This file plots some additional figures, such as the interest rate elasticity of consumption as a function of $\psi$.
+
+\path{sSettings.mat}\\
+This structure object stores generic, design-related settings to ensure consistency across figures.
+
+\subsection{Exact replication of figures in the paper}
+\textbf{Figure 2a.} Run \path{main_PE_MPCs_Analytical_Plotting.m} with \path{s=0} and \path{optionModel} set to \path{H}. \\
+\textbf{Figure 2b.} Run \path{main_PE_MPCs_Analytical_Plotting.m} with \path{s=0} and \path{optionModel} set to \path{W}. \\
+\textbf{Figure 3a.} Run \path{main_PE_MPCs_Analytical_Plotting.m} with \path{s=3} and \path{optionModel} set to \path{H}. \\
+\textbf{Figure 3b.} Run \path{main_PE_MPCs_Analytical_Plotting.m} with \path{s=3} and \path{optionModel} set to \path{W}. 
+
+\section{TANK models}
+\subsection{Description of main files}
+The sub-folder \path{Dynare master codes} contains Dynare implementations \citep{adjemianDynareReferenceManual2018} of the different TANK models.  The remaining sub-folders contain files to reproduce the exact figures shown in the main text. Regarding the former, the files contained in this sub-folder are as follows.
+
+\bigskip \noindent  \underline{Baseline models.}\\
+\path{tank_uh.mod} \\
+Dynare code to replicate the baseline TANK-UH model linearized around 0 steady-state government spending/debt.
+
+ \path{tank_uw.mod} \\
+Dynare code to replicate the baseline TANK-UW model linearized around 0 steady-state government spending/debt.
+
+\path{tank_cw.mod} \\
+Dynare code to replicate the baseline TANK-CW model linearized around 0 steady-state government spending/debt.
+
+\bigskip \noindent  \underline{Medium-scale models.}\\
+\path{tank_cw_ms.mod} \\
+Dynare code to replicate the medium scale version of the TANK models used in the paper. The file includes a pre-processor macro variable at the top that can be set to choose between different version of the model, i.e., RANK, TANK-UH, TANK-UW, TANK-CH and TANK-CW.
+
+
+\subsection{Exact replication of figures in the paper}
+\textbf{Figure 5.} Run \path{~TANK models/fig5/run_fig5.m}.  \\
+\textbf{Figure 6a.} Run \path{~TANK models/fig6/figure 6a/run_fig6a.m}.  \\
+\textbf{Figure 6b.} Run \path{~TANK models/fig6/figure 6a/run_fig6a.m}.  \\
+\textbf{Figure 7.} Run \path{~TANK models/fig7/run_fig7.m}.  \\
+\textbf{Table 3.} Run \path{~TANK models/table3/simple models/run_table3.m} for the first four columns and \path{~TANK models/table3/medium scale/run_table3MS.m} for the last four columns.  
+
+\section{Additional materials}
+\subsection{Empirical evidence}
+\textbf{Figure 1.} Figure 1a relies on data from \citet{fagerengMPCHeterogeneityHousehold2018}, analyzed in and kindly shared by \citet{auclertIntertemporalKeynesianCross2018}. Figure 1b replicates Figure 1 in \citet{jappelliFiscalPolicyMPC2014} using data distributed through \href{http://doi.org/10.3886/E116432V1}{openICPSR}. We therefore do not include these files in this replication kit.
+
+\textbf{Figure 4.} Data and code for this figure are in the sub-folder \path{VAR}. To reproduce the figure, run  \path{VAR_Plotting.m}. That same file also permits reproducing the VAR-based figures shown in the online appendix.
+
+\subsection{Online appendix}
+This folder contains various sub-folders with codes that replicate the figures in the online appendix.
+%----------------------------------------------------------------------------------
+\renewcommand\refname{References for documentation}
+\bibliography{references}           
+\bibliographystyle{natbib}     
+
+\end{document}
+
+
