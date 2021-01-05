@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.5)  4 JAN 2021 18:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.10.5)  5 JAN 2021 12:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1208,7 +1208,7 @@ umentation for Replication".out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  32498 strings out of 492639
- 738354 string characters out of 6133088
+ 738357 string characters out of 6133088
  948935 words of memory out of 5000000
  35709 multiletter control sequences out of 15000+600000
  52532 words of font info for 159 fonts, out of 8000000 for 9000
@@ -1220,7 +1220,7 @@ nts/type1/urw/symbol/usyr.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb><c:/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/te
 xlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 Output written on "CF_JME_Workers, Capitalists, Government_Documentation for Re
-plication.pdf" (5 pages, 63616 bytes).
+plication.pdf" (5 pages, 63577 bytes).
 PDF statistics:
  120 PDF objects out of 1000 (max. 8388607)
  106 compressed objects within 2 object streams
